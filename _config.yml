@@ -25,6 +25,8 @@ description:               Simple Material is a Jekyll theme for blogs and portf
 # Name of the author
 author:                    John Doe
 
+show_downloads:            true
+
 # For showing Twitter cards
 twitter:
   username: saifkhichi96
