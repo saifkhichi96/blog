@@ -2,4 +2,20 @@
 layout: default
 ---
 
-{{ content }}
+<style>
+    article img {
+      border-radius: 8px;
+      width: 100%;
+      margin: auto;
+    }
+</style>
+
+<!-- Page Content -->
+<div class="col-md-8">
+  {{ content }}
+</div>
+
+<aside class="col-md-4">
+  {% include widget_search.html %}
+  {% include disqus.html %}
+</aside>
