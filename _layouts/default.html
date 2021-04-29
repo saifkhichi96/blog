@@ -134,12 +134,19 @@
             </nav>
           </section>
 
-          {% if page.cover %}
-          <div class="page-cover" style="background-image: url('{{ site.baseurl }}{{ page.cover }}'}})">
+          <!-- Media -->
+          {% if page.demo %}
+          <section class="embed-container">
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ page.demo }}?controls=0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+          </section>
+          {% elsif page.image %}
+          <section>
+            <img class="project-portfolio-img" src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}" />
+          </section>
           {% endif %}
 
           <!-- Summary -->
-          <section class="{% if page.cover %}align-bottom{% endif %}">
+          <section>
             <div class="project-summary">
               {% if page.icon %}
               <img class="project-logo" src="{{ site.baseurl}}{{ page.icon }}" alt="{{ page.title }}" />
@@ -170,10 +177,6 @@
             </div>
             {% endif %}
           </section>
-
-          {% if page.cover %}
-          </div>
-          {% endif %}
         </header>
 
         <!-- Page Content -->
